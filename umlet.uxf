@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>712</x>
-      <y>216</y>
+      <x>760</x>
+      <y>296</y>
       <w>200</w>
       <h>104</h>
     </coordinates>
@@ -22,40 +22,39 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>376</x>
-      <y>560</y>
-      <w>120</w>
-      <h>112</h>
+      <x>384</x>
+      <y>640</y>
+      <w>200</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>Investigador
 -
-+ area: str
-
++ area_investigacion: str
 -</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>568</x>
-      <y>560</y>
+      <x>616</x>
+      <y>640</y>
       <w>208</w>
-      <h>120</h>
+      <h>88</h>
     </coordinates>
     <panel_attributes>Profesor
 -
 + asignaturas_impartidas: list
-
--</panel_attributes>
+-
+- añadir_asignaturas(asignatura: str)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>696</x>
-      <y>800</y>
+      <x>744</x>
+      <y>840</y>
       <w>128</w>
-      <h>96</h>
+      <h>56</h>
     </coordinates>
     <panel_attributes>Asociado
 -
@@ -65,24 +64,24 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>840</x>
-      <y>448</y>
+      <x>888</x>
+      <y>520</y>
       <w>416</w>
-      <h>120</h>
+      <h>96</h>
     </coordinates>
     <panel_attributes>Estudiante
 -
 + asignaturas_matriculadas: list
-
 -
-</panel_attributes>
+- devolver_datos()
+- eliminar_estudiante()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>376</x>
-      <y>216</y>
+      <x>424</x>
+      <y>296</y>
       <w>168</w>
       <h>80</h>
     </coordinates>
@@ -96,21 +95,21 @@ FEMININO</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>792</x>
-      <y>312</y>
+      <x>840</x>
+      <y>392</y>
       <w>184</w>
-      <h>152</h>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0;210.0;100.0;210.0;170.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0;210.0;100.0;210.0;160.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>512</x>
-      <y>800</y>
+      <x>560</x>
+      <y>840</y>
       <w>112</w>
-      <h>72</h>
+      <h>56</h>
     </coordinates>
     <panel_attributes>Titular
 -
@@ -120,30 +119,30 @@ FEMININO</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>672</y>
+      <x>720</x>
+      <y>720</y>
       <w>96</w>
-      <h>144</h>
+      <h>136</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0;100.0;70.0;100.0;160.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0;100.0;110.0;100.0;150.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>544</x>
-      <y>672</y>
+      <x>592</x>
+      <y>720</y>
       <w>152</w>
-      <h>144</h>
+      <h>136</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>170.0;10.0;170.0;70.0;10.0;70.0;10.0;160.0</additional_attributes>
+    <additional_attributes>170.0;10.0;170.0;110.0;10.0;110.0;10.0;150.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>144</x>
-      <y>680</y>
+      <x>128</x>
+      <y>480</y>
       <w>168</w>
       <h>96</h>
     </coordinates>
@@ -159,8 +158,8 @@ DIS
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>536</x>
-      <y>256</y>
+      <x>584</x>
+      <y>336</y>
       <w>192</w>
       <h>32</h>
     </coordinates>
@@ -172,39 +171,45 @@ m2=0..*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>848</x>
-      <y>64</y>
-      <w>416</w>
-      <h>104</h>
+      <x>736</x>
+      <y>56</y>
+      <w>688</w>
+      <h>192</h>
     </coordinates>
     <panel_attributes>Universidad
 -
 + nombre: str
-
-
++ estudiantes: list of Estudiante
++ asociados: list of Asociado
++ titulares: list of Titular
++ investigadores: list of Investigador
 -
-+ añadir_estudiante(nombre:str, DNI:int, direccion:str, sexo: Sexo)
-+ eliminar_estudiante(estudiante: Estudiante)</panel_attributes>
++ añadir_estudiante(nombre: str, DNI: int, direccion: str, sexo: Sexo)
++ añadir_profesor_asociado(nombre: str, DNI: int, direccion: str, sexo: Sexo, departamento: Departamento)
++ añadir_profesor_titular(nombre: str, DNI: int, direccion: str, sexo: Sexo, departamento: Departamento, area_investigacion: str)
++ eliminar_estudiante(estudiante: Estudiante)
++ listar_estudiantes()
++ cambiar_departamento(DNI: int, departamento_nuevo: str)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1040</x>
-      <y>160</y>
+      <x>1088</x>
+      <y>240</y>
       <w>40</w>
-      <h>304</h>
+      <h>296</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=0..*
 m2=1</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;360.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;350.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>424</x>
-      <y>664</y>
+      <x>472</x>
+      <y>704</y>
       <w>104</w>
       <h>184</h>
     </coordinates>
@@ -214,22 +219,23 @@ m2=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>464</x>
-      <y>416</y>
-      <w>168</w>
+      <x>408</x>
+      <y>496</y>
+      <w>376</w>
       <h>64</h>
     </coordinates>
     <panel_attributes>Miembro_Departamento
 -
-
-</panel_attributes>
++ departamento: Departamento
+-
+- cambiar_departamento(DNI: int, departamento_nuevo: str)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>544</x>
-      <y>312</y>
+      <x>592</x>
+      <y>392</y>
       <w>272</w>
       <h>120</h>
     </coordinates>
@@ -239,8 +245,8 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>432</x>
-      <y>472</y>
+      <x>480</x>
+      <y>552</y>
       <w>128</w>
       <h>104</h>
     </coordinates>
@@ -250,12 +256,25 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>536</x>
-      <y>472</y>
+      <x>584</x>
+      <y>552</y>
       <w>160</w>
       <h>104</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0;180.0;60.0;180.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>520</y>
+      <w>136</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
