@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>90</x>
+      <x>80</x>
       <y>130</y>
       <w>100</w>
       <h>30</h>
@@ -15,7 +15,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>300</x>
+      <x>290</x>
       <y>130</y>
       <w>100</w>
       <h>30</h>
@@ -26,7 +26,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>500</x>
+      <x>490</x>
       <y>130</y>
       <w>160</w>
       <h>30</h>
@@ -37,7 +37,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
+      <x>770</x>
       <y>130</y>
       <w>100</w>
       <h>30</h>
@@ -48,7 +48,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1010</x>
+      <x>1000</x>
       <y>130</y>
       <w>100</w>
       <h>30</h>
@@ -61,49 +61,49 @@
     <coordinates>
       <x>120</x>
       <y>150</y>
-      <w>40</w>
-      <h>720</h>
+      <w>30</w>
+      <h>710</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;700.0;20.0;10.0</additional_attributes>
+    <additional_attributes>10.0;690.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>330</x>
       <y>150</y>
-      <w>40</w>
+      <w>30</w>
       <h>720</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;700.0;20.0;10.0</additional_attributes>
+    <additional_attributes>10.0;700.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>560</x>
       <y>150</y>
-      <w>40</w>
-      <h>720</h>
+      <w>30</w>
+      <h>710</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;700.0;20.0;10.0</additional_attributes>
+    <additional_attributes>10.0;690.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>810</x>
       <y>150</y>
-      <w>40</w>
+      <w>30</w>
       <h>720</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;700.0;20.0;10.0</additional_attributes>
+    <additional_attributes>10.0;700.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>130</x>
+      <x>120</x>
       <y>200</y>
       <w>240</w>
       <h>40</h>
@@ -115,7 +115,7 @@ Añade estudiante</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>130</x>
+      <x>120</x>
       <y>240</y>
       <w>240</w>
       <h>40</h>
@@ -127,7 +127,7 @@ Añade asignaturas</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>130</x>
+      <x>120</x>
       <y>320</y>
       <w>240</w>
       <h>40</h>
@@ -139,7 +139,7 @@ Elimina asignaturas</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>130</x>
+      <x>120</x>
       <y>280</y>
       <w>240</w>
       <h>40</h>
@@ -151,102 +151,102 @@ Lista sus asignaturas</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>130</x>
+      <x>120</x>
       <y>400</y>
-      <w>460</w>
+      <w>470</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 Añade investigador</panel_attributes>
-    <additional_attributes>440.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>450.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1040</x>
       <y>150</y>
-      <w>40</w>
+      <w>30</w>
       <h>720</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;700.0;20.0;10.0</additional_attributes>
+    <additional_attributes>10.0;700.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
+      <x>560</x>
       <y>440</y>
-      <w>500</w>
+      <w>510</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 Cambia</panel_attributes>
-    <additional_attributes>480.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>490.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>130</x>
+      <x>120</x>
       <y>520</y>
-      <w>710</w>
+      <w>720</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 Añade profesor</panel_attributes>
-    <additional_attributes>690.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>700.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>130</x>
+      <x>120</x>
       <y>560</y>
-      <w>710</w>
+      <w>720</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 Añade asignaturas</panel_attributes>
-    <additional_attributes>690.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>700.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>130</x>
+      <x>120</x>
       <y>600</y>
-      <w>710</w>
+      <w>720</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 Lista sus asignaturas</panel_attributes>
-    <additional_attributes>10.0;20.0;690.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;700.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>130</x>
+      <x>120</x>
       <y>640</y>
-      <w>710</w>
+      <w>720</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 Elimina asignaturas</panel_attributes>
-    <additional_attributes>10.0;20.0;690.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;700.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>810</x>
+      <x>800</x>
       <y>680</y>
-      <w>260</w>
+      <w>270</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 Cambia</panel_attributes>
-    <additional_attributes>240.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>250.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>130</x>
+      <x>120</x>
       <y>360</y>
       <w>240</w>
       <h>40</h>
@@ -258,25 +258,25 @@ Elimina estudiante</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>130</x>
+      <x>120</x>
       <y>480</y>
-      <w>460</w>
+      <w>470</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 Elimina investigador</panel_attributes>
-    <additional_attributes>440.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>450.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>130</x>
+      <x>120</x>
       <y>720</y>
-      <w>710</w>
+      <w>720</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 Elimina profesor</panel_attributes>
-    <additional_attributes>690.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>700.0;20.0;10.0;20.0</additional_attributes>
   </element>
 </diagram>
