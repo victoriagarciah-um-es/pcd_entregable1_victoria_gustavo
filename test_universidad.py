@@ -272,45 +272,30 @@ class Profesor_titular(Investigador, Profesor):
         Profesor.__init__(self, nombre, DNI, direccion, sexo, departamento)
 
 
+def test_añadir_estudiante():
+    u = Universidad('umu')
+    u.añadir_estudiante('Joaquín', '48829491J', 'c/Mayor',  Sexo.MASCULINO)
+    assert len(u._estudiantes) == 1
 
+def test_eliminar_estudiante():
+    u = Universidad('umu')
+    u.añadir_estudiante('Joaquín', '48829491J', 'c/Mayor',  Sexo.MASCULINO)
+    u.eliminar_estudiante('48829491J')
+    assert len(u._estudiantes) == 0
 
+def test_anadir_profesor_asociado():
+    u = Universidad('umu')
+    u.añadir_profesor_asociado('Gustavo', '37492065H','c/Mula',  Sexo.MASCULINO, Departamento.DIIC) 
+    assert len(u._asociados) == 1
 
-if __name__ == '__main__':
-    u = Universidad('umu')                                                                                                  #Instanciamos la universidad.
-    u.añadir_estudiante('Joaquín', '48829491J', 'c/Mayor',  Sexo.MASCULINO)                                                 #Instanciamos un estudiante.
-    u.añadir_estudiante('Victoria', '49170972K', 'c/Real',  Sexo.FEMENINO)                                                  #Instanciamos un segundo estudiante.
-    u.añadir_profesor_asociado('Gustavo', '37492065H','c/Mula',  Sexo.MASCULINO, Departamento.DIIC)                         #Instanciamos un profesor asociado.
-    u.añadir_profesor_titular('Agustín', '23198457P', 'c/Rosario', Sexo.MASCULINO, Departamento.DIIC, 'Ciberseguridad')     #Instanciamos un profesor titular.
-    u.añadir_profesor_titular('Sofía', '29475639V', 'c/Gran Vía', Sexo.FEMENINO, Departamento.DIIC, 'Redes')                #Instanciamos un segundo profesor titular.
-    u.añadir_investigador('Martín', '38947591U', 'c/Alcalá', Sexo.MASCULINO, Departamento.DITEC, 'Inteligencia artificial') #Instanciamos un investigador.
-    u.añadir_investigador('Carlota', '47289110G', 'c/Pamplona', Sexo.FEMENINO, Departamento.DIS, 'Ciberseguridad')          #Instanciamos un segundo investigador.
+def test_eliminar_investigador_y_titular():
+    u = Universidad('umu')
+    u.añadir_profesor_titular('Sofía', '29475639V', 'c/Gran Vía', Sexo.FEMENINO, Departamento.DIIC, 'Redes')
+    u.eliminar_investigador('29475639V')
+    assert len(u._investigadores) ==  0 and len(u._titulares) == 0
 
-
-    u.listar_estudiantes()                                                                                                 #Listamos los estudiantes.
-    u.añadir_asignatura_matriculada('48829491J', 'Matemáticas')                                                            #Añadimos una primera asigantura.
-    u.añadir_asignatura_matriculada('48829491J', 'Computadores')                                                           #Añadimos una segunda asigantura.
-    u.listar_asignaturas_matriculadas('48829491J')                                                                         #Listamos las asignaturas.
-    u.eliminar_asignatura_matriculada('48829491J', 'Matemáticas')                                                          #Eliminamos la asignatura.
-    u.listar_asignaturas_matriculadas('48829491J')                                                                         #Volvemos a listar las asignaturas.
-    u.eliminar_estudiante('48829491J')                                                                                     #Eliminamos el estudiante.
-    u.listar_asignaturas_matriculadas('48829491J')                                                                         #Listamos otra vez las asignaturas.
-    u.listar_estudiantes()                                                                                                 #Listamos los estudiantes.
-
-    u.listar_investigadores()                                                                                              #Listamos los investigadores.
-    u.listar_titulares()                                                                                                   #Listamos los profesores titulares.
-    u.cambiar_dpt('23198457P', Departamento.DIIC)                                                                          #Intentamos cambiar el departamento al que ya pertenece.
-    u.cambiar_dpt('23198457P', Departamento.DIS)                                                                           #Ahora lo cambiamos bien.
-    u.listar_investigadores()                                                                                              #Listamos otra vez investigadores
-    u.listar_titulares()                                                                                                   # y titulares.
-    u.eliminar_titular('29475639V')                                                                                        #Eliminamos un profesor titular.
-    u.eliminar_investigador('23198457P')                                                                                   #Eliminamos un investigador y titular.
-    u.listar_investigadores()                                                                                              #Listamos otra vez investigadores
-    u.listar_titulares()                                                                                                   # y titulares.
-
-    u.añadir_asignatura_impartida('37492065H', 'Matemáticas')                                                              #Añadimos una primera asignatura.
-    u.añadir_asignatura_impartida('37492065H', 'Calculo 2')                                                                #Añadimos una segunda asignatura.
-    u.listar_asignaturas_impartidas('37492065H')                                                                           #Listamos las asignaturas impartidas por este profesor.
-    u.eliminar_asignatura_impartida('48829491J', 'Física')                                                                 #Intentamos eliminar una asignatura a un DNI que no corresponde con ningún profesor.
-    u.eliminar_asignatura_impartida('37492065H', 'Física')                                                                 #Intentamos eliminar una asignatura que no imparte un profesor.
-    u.eliminar_asignatura_impartida('37492065H', 'Matemáticas')                                                            #Eliminamos una asignatura.
-    u.listar_asignaturas_impartidas('37492065H')                                                                           #Volvemos listar las asignaturas.
+def test_cambiar_departamento():
+    u = Universidad('umu')
+    u.añadir_profesor_titular('Sofía', '29475639V', 'c/Gran Vía', Sexo.FEMENINO, Departamento.DIIC, 'Redes')
+    u.cambiar_dpt('29475639V', Departamento.DIS)
+    assert u._titulares[0].departamento == Departamento.DIS
